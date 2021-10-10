@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<packages>
+	<package>
+		<name>jackson-databind-2.8.5.jar</name>
+		<notes> </notes>
+	</package>
+	<package>
+		<name>jackson-databind-2.8.9.jar</name>
+		<notes> </notes>
+	</package>
+	<package>
+		<name>jackson-databind-2.9.4.jar</name>
+		<notes> </notes>
+	</package>
+	<package>
+		<name>xstream-1.4.14.jar</name>
+		<notes> </notes>
+	</package>
+	<package>
+		<name>spring-data-commons-1.13.6.RELEASE.jar</name>
+		<notes> </notes>
+	</package>
+</packages>

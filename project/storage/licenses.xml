@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<licenses>
+	<license>
+		<name>Libpng</name>
+		<description> </description>
+		<clearance> </clearance>
+		<embed> </embed>
+		<link> </link>
+		<public> </public>
+		<distribution> </distribution>
+		<direct> </direct>
+		<notes> </notes>
+		<url> testURL </url>
+	</license>
+	<license>
+		<name>xstream-1.4.14.jar</name>
+		<description> </description>
+		<clearance> </clearance>
+		<embed> </embed>
+		<link> </link>
+		<public> </public>
+		<distribution> </distribution>
+		<direct> </direct>
+		<notes> </notes>
+		<url> </url>
+	</license>
+	<license>
+		<name>jackson-databind-2.9.4.jar</name>
+		<description> </description>
+		<clearance> </clearance>
+		<embed> </embed>
+		<link> </link>
+		<public> </public>
+		<distribution> </distribution>
+		<direct> </direct>
+		<notes> </notes>
+		<url> </url>
+	</license>
+	<license>
+		<name>jackson-databind-2.8.9.jar</name>
+		<description> </description>
+		<clearance> </clearance>
+		<embed> </embed>
+		<link> </link>
+		<public> </public>
+		<distribution> </distribution>
+		<direct> </direct>
+		<notes> </notes>
+		<url> </url>
+	</license>
+	<license>
+		<name>spring-data-commons-1.13.6.RELEASE.jar</name>
+		<description> </description>
+		<clearance> </clearance>
+		<embed> </embed>
+		<link> </link>
+		<public> </public>
+		<distribution> </distribution>
+		<direct> </direct>
+		<notes> </notes>
+		<url> </url>
+	</license>
+</licenses>

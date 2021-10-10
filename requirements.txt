@@ -1,0 +1,11 @@
+Flask==0.12.4
+flask-cors==3.0.7
+requests==2.19.1
+Jinja2==2.5.5
+PyMySQL==0.9.3
+python-docx==0.8.10
+werkzeug==0.16.1
+pyopenssl
+flask-talisman
+flask_wtf
+

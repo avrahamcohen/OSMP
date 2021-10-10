@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Security Open-Source Dashboard</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Morris Charts CSS -->
+  <link href="/static/css/morris.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="/static/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- Custom CSS -->
+  <link href="/static/css/startmin.css" rel="stylesheet">
+
+  <!-- Custom JS -->
+  <script nonce="{{ csp_nonce() }}"  src="/static/js/auto-logout.js"></script>
+
+  <!-- jQuery -->
+  <script nonce="{{ csp_nonce() }}"  src="/static/js/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script nonce="{{ csp_nonce() }}"  src="/static/js/bootstrap.min.js"></script>
+
+  <!-- Metis Menu Plugin JavaScript -->
+  <script nonce="{{ csp_nonce() }}"  src="/static/js/metisMenu.min.js"></script>
+
+  <!-- Custom Theme JavaScript -->
+  <script nonce="{{ csp_nonce() }}"  src="/static/js/startmin.js"></script>
+
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script nonce="{{ csp_nonce() }}"  src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script nonce="{{ csp_nonce() }}"  src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div id="wrapper">
+  <!-- Navigation -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" style="background-color: rgb(189, 45, 76); color: white; border-color:rgb(189, 45, 76);" id="onMouseOver" role="navigation">
+      <ul class="nav navbar-left navbar-top-links">
+        <li>
+          <a href="/" class="" style="background-color: rgb(189, 45, 76); color: white;" id="onMouseOver">
+          <i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+        </li>
+        <li>
+          <a href="/requests/new" class="" style="background-color: rgb(189, 45, 76); color: white;" id="onMouseOver">
+          <i class="fa fa-paper-plane fa-fw"></i> New Request</a>
+        </li>
+        <li>
+          <a href="/requests/pending" class="" style="background-color: rgb(189, 45, 76); color: white;" id="onMouseOver">
+          <i class="fa fa-clock-o fa-fw"></i> Pending Requests</a>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" style="background-color: rgb(189, 45, 76); color: white;" id="onMouseOver" data-toggle="dropdown" href="#">
+            <i class="fa fa-info fa-fw"></i> Legal Information <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu dropdown-user" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver">
+            <li>
+		    <a href="/legal/licenses" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-info fa-fw"></i> Licenses</a>
+            </li>
+            <li class="divider" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"></li>
+            <li>
+		    <a href="/legal/add" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-plus fa-fw"></i> New Entry</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-right navbar-top-links">
+        <li class="dropdown">
+          <a class="dropdown-toggle" style="background-color: rgb(189, 45, 76); color: white;" id="onMouseOver" data-toggle="dropdown" href="#">
+            <i class="fa fa-user fa-fw"></i> {{user}} <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu dropdown-user" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver">
+            <li>
+			  <a href="/login" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-user fa-fw"></i> Login</a>
+            </li>
+            <li class="divider" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"></li>
+            <li><a href="/login/endsession.do" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <!-- Page Content -->
+    <div id="page-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-12">
+          </br>
+            {% block content %} {% endblock %}
+          </div>
+        </div>
+        <!-- ... Your content goes here ... -->
+        </div>
+    </div>
+  </div>
+    {% if session['loggedin'] %}
+    <script nonce="{{ csp_nonce() }}" >$(document).ready(function(){setupTimers();});</script>   
+    {% endif %}
+    <script nonce="{{ csp_nonce() }}">
+      document.getElementById("onMouseOver").addEventListener('mouseover', mouseOver);
+      function mouseOver() {
+        document.getElementById("onMouseOver").style.color = "rgb(189, 45, 76)";
+      }
+    </script>
+</body>
+</html>

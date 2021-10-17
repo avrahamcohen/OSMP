@@ -70,10 +70,12 @@
             <li>
 		    <a href="/legal/licenses" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-info fa-fw"></i> Licenses</a>
             </li>
+	    {% if session['authorization'] == 'authorized' %}
             <li class="divider" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"></li>
             <li>
-		    <a href="/legal/add" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-plus fa-fw"></i> New Entry</a>
+		    <a href="/legal/licenses/add" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-plus fa-fw"></i> New Entry</a>
             </li>
+	    {% endif %}
           </ul>
         </li>
       </ul>
@@ -88,7 +90,7 @@
 			  <a href="/login" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-user fa-fw"></i> Login</a>
             </li>
             <li class="divider" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"></li>
-            <li><a href="/login/endsession.do" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
+            <li><a href="/logout.do" style="background-color: white; color: rgb(189, 45, 76);" id="onMouseOver"><i class="fa fa-sign-out fa-fw"></i> Logout</a>
             </li>
           </ul>
         </li>
